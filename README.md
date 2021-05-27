@@ -2,9 +2,9 @@
 Programming Workshop Project
 
 **Team:**
-Oleksandra Ablitsova \n
-Omar Salah \n
-Osama Elmenshawy \n
-Elian Kunze \n
+Oleksandra Ablitsova | 
+Omar Salah | 
+Osama Elmenshawy | 
+Elian Kunze
 
 **GitHub Pages:** https://saashen.github.io/CSPW210-frontend/
