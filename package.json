@@ -1,0 +1,27 @@
+{
+  "name": "CSPW210-frontend",
+  "version": "1.0.0",
+  "description": "Programming Workshop Project",
+  "main": "index.js",
+  "homepage": "https://saashen.github.io/CSPW210-frontend/",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /CSPW210-frontend/"  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saashen/CSPW210-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saashen/CSPW210-frontend/issues"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.7.1",
+    "sass": "^1.34.0"
+  }
+}
