@@ -6,7 +6,8 @@
   "homepage": "https://saashen.github.io/CSPW210-frontend/",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /CSPW210-frontend/"  },
+    "build": "parcel build src/*.html --public-url /CSPW210-frontend/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Saashen/CSPW210-frontend.git"
