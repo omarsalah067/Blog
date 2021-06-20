@@ -24,5 +24,9 @@
     "parcel-plugin-nuke-dist": "^1.0.1",
     "posthtml-include": "^1.7.1",
     "sass": "^1.34.0"
+  },
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "got": "^11.8.2"
   }
 }
