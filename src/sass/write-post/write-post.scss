@@ -1,0 +1,10 @@
+@import '../variables';
+
+.post-form {
+  font-family: $regular-font;
+  width: 300px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+}

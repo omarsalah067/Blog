@@ -28,15 +28,21 @@
 .swagger {
   width: 100px;
   height: 40px;
-  background-color: #ffffff;
+}
+
+.github a,
+.swagger a {
+  width: 100px;
+  height: 40px;
+  padding: 10px;
 }
 
 .github {
-    background-color: #24292e;
+  background-color: #24292e;
 }
 
 .swagger {
-    background-color: #38b832;
+  background-color: #38b832;
 }
 
 .github a,

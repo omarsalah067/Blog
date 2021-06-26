@@ -1,6 +1,6 @@
 @import '../variables';
 
-.registration-form {
+.authforms-form {
   font-family: $regular-font;
   width: 300px;
   margin: 100px auto;
@@ -9,7 +9,12 @@
   flex-flow: column;
 }
 
-.registration-input {
+.authforms-header {
+  padding-bottom: 20px;
+  font-family: $title-font;
+}
+
+.authforms-input {
   width: 100%;
   height: 45px;
   margin-bottom: 10px;
@@ -18,11 +23,11 @@
   border-radius: 0px 20px;
 }
 
-.registration-input::placeholder {
+.authforms-input::placeholder {
   color: #55c08c;
 }
 
-.register-button {
+.authforms-button {
   height: 45px;
   margin-top: 15px;
   background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
@@ -31,7 +36,7 @@
 }
 
 @media (min-width: 768px) {
-  .registration-form {
+  .authforms-form {
     width: 400px;
   }
 }

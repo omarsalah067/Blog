@@ -1,0 +1,29 @@
+<form
+  action="/auth/login"
+  method="POST"
+  class="authforms-form"
+  enctype="application/x-www-form-urlencoded"
+>
+  <h2 class="authforms-header">Enter your account:</h2>
+
+  <label for="email">Email</label>
+  <input
+    class="authforms-input"
+    type="email"
+    placeholder="teddy.bear@mail.com"
+    name="email"
+    id="email"
+    required
+  />
+
+  <label for="password">Password</label>
+  <input
+    class="authforms-input"
+    type="password"
+    placeholder="Secret Teddy Password"
+    name="password"
+    id="password"
+    required
+  />
+  <button type="submit" class="authforms-button">Log In</button>
+</form>
