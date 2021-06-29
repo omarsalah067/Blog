@@ -1,25 +1,14 @@
-<form
-  class="authforms-form registration-form"
-  enctype="application/x-www-form-urlencoded"
->
+<form class="authforms-form registration-form" enctype="application/x-www-form-urlencoded">
   <h2 class="authforms-header">Create account:</h2>
   <label for="name">Name</label>
   <input
-  class="authforms-input"
-  type="text"
-  placeholder="Teddy Bear"
-  name="name"
-  id="name"
-/>
-  <!-- <input
     class="authforms-input"
     type="text"
     placeholder="Teddy Bear"
-    autocomplete="off"
     name="name"
     id="name"
     required
-  /> -->
+  />
 
   <label for="email">Email</label>
   <input
@@ -28,6 +17,7 @@
     placeholder="teddy.bear@mail.com"
     name="email"
     id="email"
+    required
   />
 
   <label for="password">Password</label>
@@ -37,6 +27,7 @@
     placeholder="Secret Teddy Password"
     name="password"
     id="password"
+    required
   />
   <button type="submit" class="authforms-button">Register</button>
 </form>

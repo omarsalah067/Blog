@@ -47,7 +47,6 @@ async function handleLoginSubmit(e) {
     axios.defaults.headers.common.Authorization = `Bearer ${answer.data.token}`;
     success({ text: 'Success!' });
   } catch (err) {
-    console.log(err);
     error({ text: JSON.parse(err.request.response).message });
   }
 }
@@ -58,7 +57,6 @@ async function handleLogout(e) {
     axios.defaults.headers.common.Authorization = null;
     success({ text: 'Success!' });
   } catch (err) {
-    console.log(err);
     error({ text: JSON.parse(err.request.response).message });
   }
 }

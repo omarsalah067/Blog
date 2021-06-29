@@ -40,4 +40,4 @@
 //   rootDiv.innerHTML = routes[window.location.pathname];
 // };
 
-// const paragraph = elem.querySelector(".hidden");
+// // const paragraph = elem.querySelector(".hidden");
