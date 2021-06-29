@@ -1,3 +1,43 @@
-.header {
+@import '../variables';
 
+.header {
+  background: linear-gradient(
+    0deg,
+    rgb(233, 236, 238) 0%,
+    rgb(241, 244, 245) 35%,
+    rgb(255, 255, 255) 100%
+  );
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: $title-font;
+  font-weight: 900;
+  font-size: 30px;
+  color: #000000;
+}
+
+.menu {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $thin-font;
+  font-size: 20px;
+}
+
+.menu li {
+  padding: 24px 14px;
+}
+
+.menu > li a {
+  color: #000000;
 }

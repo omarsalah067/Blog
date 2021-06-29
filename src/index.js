@@ -1,3 +1,3 @@
 import './sass/main.scss';
-import './js/registration';
+import './js/auth';
 import './js/uploadImage';
