@@ -21,16 +21,15 @@
 }
 
 .menu {
-  width: 400px;
+  width: 180px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
   font-family: $thin-font;
   font-size: 20px;
 }
 
 .menu li {
-  padding: 24px 14px 19px;
+  padding: 24px 0 19px;
 }
 
 .menu-link {

@@ -1,67 +1,83 @@
-<body class="registration-page">
-  <header class="header">
-    <div class="container">
-      <nav class="navigation">
-        <a href="/" class="routing-path logo">IU Blog</a>
-        <ul class="menu">
-          <li>
-            <a href="#" class="routing-path menu-link">Registration</a>
-          </li>
-          <li>
-            <a href="#" class="routing-path menu-link">Log In</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <form class="authforms-form registration-form" enctype="application/x-www-form-urlencoded">
-      <h2 class="authforms-header">Create account:</h2>
-      <label for="name">Name</label>
-      <input
-        class="authforms-input"
-        type="text"
-        placeholder="Teddy Bear"
-        name="name"
-        id="name"
-        required
-      />
-
-      <label for="email">Email</label>
-      <input
-        class="authforms-input"
-        type="email"
-        placeholder="teddy.bear@mail.com"
-        name="email"
-        id="email"
-        required
-      />
-
-      <label for="password">Password</label>
-      <input
-        class="authforms-input"
-        type="password"
-        placeholder="Secret Teddy Password"
-        name="password"
-        id="password"
-        required
-      />
-      <button type="submit" class="authforms-button">Register</button>
-    </form>
-  </main>
-  <footer class="footer">
-    <div class="container">
-      <p class="created-by">
-        Created by: Oleksandra Ablitsova, Osama Elmenshawy, Omar Salah, Elian Kunze
-      </p>
-      <div class="buttons">
-        <button class="github" type="button">
-          <a href="https://github.com/Saashen/CSPW210-frontend">GitHub</a>
-        </button>
-        <button class="swagger" type="button">
-          <a href="https://app.swaggerhub.com/apis-docs/Saashen/CSPW210/1.0.0/">Swagger</a>
-        </button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IU Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./sass/styles.scss" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body class="registration-page">
+    <header class="header">
+      <div class="container">
+        <nav class="navigation">
+          <a href="/" class="logo">IU Blog</a>
+          <ul class="menu">
+            <li>
+              <a href="./registration.html" class="menu-link">Registration</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link">Log In</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
-  </footer>
-</body>
+    </header>
+    <main>
+      <form class="authforms-form registration-form" enctype="application/x-www-form-urlencoded">
+        <h2 class="authforms-header">Create account:</h2>
+        <label for="name">Name</label>
+        <input
+          class="authforms-input"
+          type="text"
+          placeholder="Teddy Bear"
+          name="name"
+          id="name"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          class="authforms-input"
+          type="email"
+          placeholder="teddy.bear@mail.com"
+          name="email"
+          id="email"
+          required
+        />
+
+        <label for="password">Password</label>
+        <input
+          class="authforms-input"
+          type="password"
+          placeholder="Secret Teddy Password"
+          name="password"
+          id="password"
+          required
+        />
+        <button type="submit" class="authforms-button">Register</button>
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p class="created-by">
+          Created by: Oleksandra Ablitsova, Osama Elmenshawy, Omar Salah, Elian Kunze
+        </p>
+        <div class="buttons">
+          <button class="github" type="button">
+            <a href="https://github.com/Saashen/CSPW210-frontend">GitHub</a>
+          </button>
+          <button class="swagger" type="button">
+            <a href="https://app.swaggerhub.com/apis-docs/Saashen/CSPW210/1.0.0/">Swagger</a>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
