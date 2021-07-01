@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../variables.scss';
 
 .footer {
   min-height: 180px;
@@ -8,7 +8,6 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  font-family: $regular-font;
   background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
   color: #ffffff;
 }
@@ -24,30 +23,28 @@
   padding-bottom: 10px;
 }
 
-.github,
-.swagger {
+.github {
   width: 100px;
   height: 40px;
+}
+
+.swagger {
+  @extend .github;
 }
 
 .github a,
 .swagger a {
-  width: 100px;
-  height: 40px;
+  @extend .github;
   padding: 10px;
+  color: #f0ffff;
 }
 
-.github {
+.github a {
   background-color: #24292e;
 }
 
-.swagger {
-  background-color: #38b832;
-}
-
-.github a,
 .swagger a {
-  color: #f0ffff;
+  background-color: #38b832;
 }
 
 @media (min-width: 768px) {

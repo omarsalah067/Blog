@@ -1,12 +1,12 @@
-<form class="post-form" enctype="multipart/form-data">
+<form class="post-form">
   <h2 class="post-header">Post a new article:</h2>
   <label for="title">Title</label>
-  <input class="post-input" type="text" name="title" id="title" required />
+  <input class="post-input_title" type="text" name="title" id="title" required />
 
   <label for="text">Text</label>
-  <textarea class="post-input" type="text" name="text" id="text"></textarea>
+  <textarea class="post-input_text" type="text" name="text" id="text"></textarea>
 
   <label for="image">Image</label>
-  <div class="dropzone-box" type="image" name="image" id="image"></div>
+  <div class="dropzone" type="image" name="image" id="image"></div>
   <button type="submit" class="post-button">Post</button>
 </form>

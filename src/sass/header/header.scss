@@ -1,12 +1,6 @@
-@import '../variables';
+@import '../variables.scss';
 
 .header {
-  background: linear-gradient(
-    0deg,
-    rgb(233, 236, 238) 0%,
-    rgb(241, 244, 245) 35%,
-    rgb(255, 255, 255) 100%
-  );
   min-height: 70px;
   display: flex;
   align-items: center;
@@ -16,13 +10,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgb(95, 192, 160, 0.4);
+  padding: 0 16px;
+
 }
 
 .logo {
   font-family: $title-font;
-  font-weight: 900;
-  font-size: 30px;
-  color: #000000;
+  font-size: 40px;
+  color: $color-additional;
 }
 
 .menu {
@@ -35,9 +31,14 @@
 }
 
 .menu li {
-  padding: 24px 14px;
+  padding: 24px 14px 19px;
 }
 
-.menu > li a {
-  color: #000000;
+.menu-link {
+  color: $color-bright;
+  border-bottom: 5px double transparent;
+}
+
+.menu-link:hover{
+  border-bottom: 5px double rgb(95, 192, 160, 0.4);
 }

@@ -1,8 +1,7 @@
 import axios from 'axios';
-import { success, error, defaults } from '@pnotify/core';
+import { success, error } from '@pnotify/core';
 require('dotenv').config();
 
-defaults.styling = 'material';
 
 const registrationForm = document.querySelector('.registration-form');
 const loginForm = document.querySelector('.login-form');
