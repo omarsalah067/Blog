@@ -1,6 +1,5 @@
 import './sass/styles.scss';
+import './js/helpers/pnotifySettings';
 
-import { defaults } from '@pnotify/core';
-defaults.styling = 'material';
-
-import './js/main';
+import './js/articles';
+import './js/auth';

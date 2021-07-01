@@ -1,13 +1,10 @@
 @import './fonts.scss';
 @import './base.scss';
 @import './main.scss';
-// @import 'dropzone/dist/min/dropzone.min.css';
 
 @import './header/header.scss';
 @import './article/article.scss';
-
-// @import './authforms/authforms.scss';
-// @import './write-post/write-post.scss';
+@import './authforms/authforms.scss';
 @import './footer/footer.scss';
 
 @import '@pnotify/core/dist/Material.css';
