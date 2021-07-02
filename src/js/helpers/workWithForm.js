@@ -8,7 +8,7 @@ export const takeFormData = e => {
   formData.forEach((value, name) => {
     data[name] = value;
   });
-
+  
   return data;
 };
 

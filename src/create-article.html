@@ -17,7 +17,7 @@
     <header class="header">
       <div class="container">
         <nav class="navigation">
-          <a href="/" class="logo">IU Blog</a>
+          <a href="./index.html" class="logo">IU Blog</a>
           <ul class="menu">
             <li class="newpost-link">
               <a href="./create-article.html" class="menu-link">New post</a>
@@ -28,26 +28,32 @@
       </div>
     </header>
     <main>
-      <form class="post-form">
-        <h2 class="post-header">Post a new article:</h2>
+      <form class="post-form forms-form" enctype="multipart/form-data">
+        <h2 class="forms-header">Post a new article:</h2>
         <label for="title">Title</label>
-        <input class="post-input_title" type="text" name="title" id="title" required />
+        <input
+          class="forms-input forms-input__title"
+          type="text"
+          name="title"
+          required
+        />
 
         <label for="text">Text</label>
-        <textarea class="post-input_text" type="text" name="text" id="text" required></textarea>
+        <textarea
+          class="forms-input forms-input__text"
+          type="text"
+          name="text"
+        ></textarea>
 
         <label for="image">Image</label>
         <input
           type="file"
           name="image"
-          id="image"
-          class="dropzone"
-          value="Choose Photo"
+          class="forms-input forms-input__image"
           accept="image/png, image/jpeg"
           required
         />
-        <!-- <div class="dropzone" type="image" name="image" id="image"></div> -->
-        <button type="submit" formenctype="multipart/form-data" class="post-button">Post</button>
+        <button type="submit" class="forms-button">Post</button>
       </form>
     </main>
     <footer class="footer">

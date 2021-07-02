@@ -6,3 +6,4 @@ import './js/articles';
 import './js/registration';
 import './js/login';
 import './js/logout';
+import './js/createArticle';

@@ -8,4 +8,5 @@ export default {
   newPost: document.querySelector('.newpost-link'),
   login: document.querySelector(' .login-link'),
   registration: document.querySelector('.registration-link'),
+  logoutEvent: document.querySelector('.logout'),
 };
