@@ -10,20 +10,15 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="./sass/styles.scss" />
     <script src="./index.js" defer></script>
   </head>
-  <body class="main-page">
+  <body class="create-article-page">
     <header class="header">
       <div class="container">
         <nav class="navigation">
           <a href="/" class="logo">IU Blog</a>
           <ul class="menu">
-            <li class="registration-link">
-              <a href="./registration.html" class="menu-link">Registration</a>
-            </li>
-            <li class="login-link">
-              <a href="./login.html" class="menu-link">Log In</a>
-            </li>
             <li class="newpost-link">
               <a href="./create-article.html" class="menu-link">New post</a>
             </li>
@@ -32,8 +27,28 @@
         </nav>
       </div>
     </header>
-    <main class="main-page">
-      <ul class="articles" id="articles"></ul>
+    <main>
+      <form class="post-form">
+        <h2 class="post-header">Post a new article:</h2>
+        <label for="title">Title</label>
+        <input class="post-input_title" type="text" name="title" id="title" required />
+
+        <label for="text">Text</label>
+        <textarea class="post-input_text" type="text" name="text" id="text" required></textarea>
+
+        <label for="image">Image</label>
+        <input
+          type="file"
+          name="image"
+          id="image"
+          class="dropzone"
+          value="Choose Photo"
+          accept="image/png, image/jpeg"
+          required
+        />
+        <!-- <div class="dropzone" type="image" name="image" id="image"></div> -->
+        <button type="submit" formenctype="multipart/form-data" class="post-button">Post</button>
+      </form>
     </main>
     <footer class="footer">
       <div class="container">

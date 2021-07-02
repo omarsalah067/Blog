@@ -1,8 +1,8 @@
 import refs from './helpers/references';
-import constants from './helpers/constants';
+const token = localStorage.getItem('token');
 
 try {
-  if (constants.isAuthorized) {
+  if (token) {
     refs.login && refs.login.classList.add('hidden');
     refs.registration && refs.registration.classList.add('hidden');
     refs.newPost && refs.newPost.classList.remove('hidden');

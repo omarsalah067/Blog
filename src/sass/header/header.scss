@@ -37,6 +37,18 @@
   border-bottom: 5px double transparent;
 }
 
-.menu-link:hover {
-  border-bottom: 5px double rgb(95, 192, 160, 0.4);
+@keyframes underlines {
+  0% {
+    border-bottom: 5px double transparent;
+  }
+
+  100% {
+    border-bottom: 5px double rgb(95, 192, 160, 0.4);
+  }
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  animation: underlines 0.6s alternate both;
+  outline: none;
 }

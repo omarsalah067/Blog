@@ -10,30 +10,50 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="./sass/styles.scss" />
     <script src="./index.js" defer></script>
   </head>
-  <body class="main-page">
+  <body class="login-page">
     <header class="header">
       <div class="container">
         <nav class="navigation">
           <a href="/" class="logo">IU Blog</a>
           <ul class="menu">
-            <li class="registration-link">
+            <li>
               <a href="./registration.html" class="menu-link">Registration</a>
             </li>
-            <li class="login-link">
+            <li>
               <a href="./login.html" class="menu-link">Log In</a>
             </li>
-            <li class="newpost-link">
-              <a href="./create-article.html" class="menu-link">New post</a>
-            </li>
-            <li class="logout-link"><a href="#" class="menu-link">Log Out</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="main-page">
-      <ul class="articles" id="articles"></ul>
+    <main>
+      <form class="authforms-form login-form" enctype="application/x-www-form-urlencoded">
+        <h2 class="authforms-header">Enter your account:</h2>
+
+        <label for="email">Email</label>
+        <input
+          class="authforms-input"
+          type="email"
+          placeholder="teddy.bear@mail.com"
+          name="email"
+          id="email"
+          required
+        />
+
+        <label for="password">Password</label>
+        <input
+          class="authforms-input"
+          type="password"
+          placeholder="Secret Teddy Password"
+          name="password"
+          id="password"
+          required
+        />
+        <button type="submit" class="authforms-button">Log In</button>
+      </form>
     </main>
     <footer class="footer">
       <div class="container">

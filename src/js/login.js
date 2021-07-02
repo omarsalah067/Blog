@@ -1,3 +1,21 @@
-import '../sass/authforms/authforms.scss';
+import axios from 'axios';
+import { success, error } from '@pnotify/core';
+import refs from './helpers/references';
+import { takeFormData, changePage } from './helpers/workWithForm';
+require('dotenv').config();
 
-const start = document.querySelector('body').classList.contains('login-page');
+const start = refs.body.classList.contains('login-page');
+start && refs.loginForm.addEventListener('submit', handleLoginSubmit);
+
+async function handleLoginSubmit(e) {
+  const data = takeFormData(e);
+  try {
+    const answer = await axios.post(process.env.SERVER_ADDRESS + '/auth/login', data);
+    localStorage.setItem('token', `Bearer ${answer.data.token}`);
+    // axios.defaults.headers.common.Authorization = `Bearer ${answer.data.token}`;
+    success({ text: 'Success!' });
+    changePage('/');
+  } catch (err) {
+    error({ text: JSON.parse(err.request.response).message });
+  }
+}

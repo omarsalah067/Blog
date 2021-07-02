@@ -12,6 +12,7 @@
 .authforms-header {
   padding-bottom: 20px;
   font-family: $title-font;
+  color: $color-light-bright;
 }
 
 .authforms-input {
@@ -19,12 +20,28 @@
   height: 45px;
   margin-bottom: 10px;
   padding-left: 15px;
-  border: 3px solid #149c90;
-  border-radius: 0px 20px;
+  border: 1px solid rgb(95, 192, 160, 0.4);
+  border-radius: 6px;
+}
+
+@keyframes focus-change {
+  0% {
+    outline-color: transparent;
+  }
+
+  100% {
+    outline-color: rgb(95, 192, 160, 1);
+  }
+}
+
+.authforms-input:focus {
+  animation: focus-change 1s alternate both;
+  outline-width: 3px;
+  outline-style: solid;
 }
 
 .authforms-input::placeholder {
-  color: #55c08c;
+  color: $color-bright;
 }
 
 .authforms-button {
@@ -33,6 +50,42 @@
   background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
   color: #ffffff;
   font-family: $title-font;
+  letter-spacing: 1px;
+  border-radius: 6px;
+}
+
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0px 4px 40px -8px transparent;
+    outline: 1px solid transparent;
+  }
+
+  100% {
+    box-shadow: 0px 4px 40px 2px rgb(15, 32, 39, 0.5);
+    outline: 1px solid #203a43;
+  }
+}
+
+.authforms-button:hover,
+.authforms-button:focus {
+  animation: shadow-drop-center 0.4s alternate both;
+}
+
+@keyframes gradient-change {
+  0% {
+    background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+    box-shadow: 0px 4px 40px 2px rgb(15, 32, 39, 0.5);
+  }
+
+  100% {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    box-shadow: 0px 4px 40px -8px transparent;
+  }
+}
+
+.authforms-button:active {
+  animation: gradient-change 0.8s alternate both;
+  animation-delay: -0.1s;
 }
 
 @media (min-width: 768px) {

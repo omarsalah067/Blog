@@ -3,6 +3,7 @@ export default {
   articles: document.querySelector('#articles'),
   registrationForm: document.querySelector('.registration-form'),
   loginForm: document.querySelector('.login-form'),
+  postForm: document.querySelector('.post-form'),
   logout: document.querySelector('.logout-link'),
   newPost: document.querySelector('.newpost-link'),
   login: document.querySelector(' .login-link'),
