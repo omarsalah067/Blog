@@ -12,6 +12,7 @@ async function handleLoginSubmit(e) {
   try {
     const answer = await axios.post(process.env.SERVER_ADDRESS + '/auth/login', data);
     localStorage.setItem('token', `Bearer ${answer.data.token}`);
+    // axios.defaults.headers.common.Authorization = `Bearer ${answer.data.token}`;
     success({ text: 'Success!' });
     changePage('/');
   } catch (err) {
