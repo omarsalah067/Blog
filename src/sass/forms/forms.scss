@@ -1,0 +1,105 @@
+@import '../variables';
+
+.forms-form {
+  font-family: $regular-font;
+  width: 300px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+}
+
+.forms-header {
+  padding-bottom: 20px;
+  font-family: $title-font;
+  color: $color-light-bright;
+}
+
+.forms-input {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border: 1px solid rgb(95, 192, 160, 0.4);
+  border-radius: 6px;
+}
+
+.forms-input__text {
+  @extend .forms-input;
+  min-height: 140px;
+  padding: 10px 15px;
+}
+
+.forms-input__image {
+  
+}
+
+@keyframes focus-change {
+  0% {
+    outline-color: transparent;
+  }
+
+  100% {
+    outline-color: rgb(95, 192, 160, 1);
+  }
+}
+
+.forms-input:focus {
+  animation: focus-change 1s alternate both;
+  outline-width: 3px;
+  outline-style: solid;
+}
+
+.forms-input::placeholder {
+  color: $color-bright;
+}
+
+.forms-button {
+  height: 45px;
+  margin-top: 15px;
+  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  font-family: $title-font;
+  letter-spacing: 1px;
+  border-radius: 6px;
+}
+
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0px 4px 40px -8px transparent;
+    outline: 1px solid transparent;
+  }
+
+  100% {
+    box-shadow: 0px 4px 40px 2px rgb(15, 32, 39, 0.5);
+    outline: 1px solid #203a43;
+  }
+}
+
+.forms-button:hover,
+.forms-button:focus {
+  animation: shadow-drop-center 0.4s alternate both;
+}
+
+@keyframes gradient-change {
+  0% {
+    background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+    box-shadow: 0px 4px 40px 2px rgb(15, 32, 39, 0.5);
+  }
+
+  100% {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    box-shadow: 0px 4px 40px -8px transparent;
+  }
+}
+
+.forms-button:active {
+  animation: gradient-change 0.8s alternate both;
+  animation-delay: -0.1s;
+}
+
+@media (min-width: 768px) {
+  .forms-form {
+    width: 400px;
+  }
+}
