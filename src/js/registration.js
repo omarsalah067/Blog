@@ -14,6 +14,7 @@ async function handleRegistrationSubmit(e) {
     success({ text: answer.data.message });
     changePage('./login.html');
   } catch (err) {
-    error({ text: JSON.parse(err.request.response).message });
+    console.log(err);
+    err.request && error({ text: JSON.parse(err.request.response).message });
   }
 }

@@ -13,6 +13,6 @@ async function getArticles() {
     const markup = answer.data.docs.map(item => articleTemplate(item)).join('');
     refs.articles.insertAdjacentHTML('afterbegin', markup);
   } catch (err) {
-    error({ text: JSON.parse(err.request.response).message });
+    err.request && error({ text: JSON.parse(err.request.response).message });
   }
 }

@@ -22,7 +22,9 @@
             <li class="newpost-link">
               <a href="./create-article.html" class="menu-link">New post</a>
             </li>
-            <li class="logout-link"><a href="#" class="menu-link">Log Out</a></li>
+            <li class="logout-link">
+              <button type="button" class="menu-link logout">Log Out</button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -31,19 +33,10 @@
       <form class="post-form forms-form" enctype="multipart/form-data">
         <h2 class="forms-header">Post a new article:</h2>
         <label for="title">Title</label>
-        <input
-          class="forms-input forms-input__title"
-          type="text"
-          name="title"
-          required
-        />
+        <input class="forms-input forms-input__title" type="text" name="title" required />
 
         <label for="text">Text</label>
-        <textarea
-          class="forms-input forms-input__text"
-          type="text"
-          name="text"
-        ></textarea>
+        <textarea class="forms-input forms-input__text" type="text" name="text"></textarea>
 
         <label for="image">Image</label>
         <input

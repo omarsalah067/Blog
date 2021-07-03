@@ -8,11 +8,15 @@ export const takeFormData = e => {
   formData.forEach((value, name) => {
     data[name] = value;
   });
-  
+
   return data;
 };
 
 export const changePage = pathname => {
-  window.history.pushState({}, pathname, window.location.origin + pathname);
-  location.reload();
+  try {
+    window.history.pushState({}, pathname, window.location.origin + pathname);
+    location.reload();
+  } catch (error) {
+    console.log(error);
+  }
 };

@@ -13,9 +13,9 @@ async function handleLoginSubmit(e) {
     const answer = await axios.post(process.env.SERVER_ADDRESS + '/auth/login', data);
     localStorage.setItem('token', `Bearer ${answer.data.token}`);
     success({ text: 'Success!' });
-    changePage('/');
+    changePage('./index.html');
   } catch (err) {
     console.log(err);
-    error({ text: JSON.parse(err.request.response).message });
+    err.request && error({ text: JSON.parse(err.request.response).message });
   }
 }

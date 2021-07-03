@@ -12,7 +12,11 @@
 .forms-header {
   padding-bottom: 20px;
   font-family: $title-font;
-  color: $color-light-bright;
+  color: $color-additional;
+}
+
+.forms-form label {
+  padding-bottom: 6px;
 }
 
 .forms-input {
@@ -21,17 +25,12 @@
   margin-bottom: 10px;
   padding-left: 15px;
   border: 1px solid rgb(95, 192, 160, 0.4);
-  border-radius: 6px;
 }
 
 .forms-input__text {
   @extend .forms-input;
   min-height: 140px;
   padding: 10px 15px;
-}
-
-.forms-input__image {
-  
 }
 
 @keyframes focus-change {
@@ -61,7 +60,6 @@
   color: #ffffff;
   font-family: $title-font;
   letter-spacing: 1px;
-  border-radius: 6px;
 }
 
 @keyframes shadow-drop-center {

@@ -14,9 +14,9 @@ async function handleLogout(e) {
     axios.defaults.headers.common.Authorization = null;
     localStorage.removeItem('token');
     success({ text: 'Success!' });
-    changePage('/');
+    changePage('./index.html');
   } catch (err) {
     console.log(err);
-    error({ text: JSON.parse(err.request.response).message });
+    err.request && error({ text: JSON.parse(err.request.response).message });
   }
 }
