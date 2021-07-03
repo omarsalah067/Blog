@@ -14,6 +14,6 @@ try {
     refs.newPost && refs.newPost.classList.add('hidden');
     refs.logout && refs.logout.classList.add('hidden');
   }
-} catch (error) {
-  console.log(error);
+} catch (err) {
+  console.log(err.message);
 }

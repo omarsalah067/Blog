@@ -10,13 +10,17 @@ start && refs.logoutEvent.addEventListener('click', handleLogout);
 async function handleLogout(e) {
   try {
     axios.defaults.headers.common.Authorization = localStorage.getItem('token');
-    await axios.post(process.env.SERVER_ADDRESS + '/auth/logout');
-    axios.defaults.headers.common.Authorization = null;
-    localStorage.removeItem('token');
-    success({ text: 'Success!' });
-    changePage('./index.html');
+    const done = await axios.post(process.env.SERVER_ADDRESS + '/auth/logout');
+    if (done) {
+      axios.defaults.headers.common.Authorization = null;
+      localStorage.removeItem('token');
+      success({ text: 'Success!' });
+      changePage('./index.html');
+    }
   } catch (err) {
-    console.log(err);
+    console.log(err.message);
     err.request && error({ text: JSON.parse(err.request.response).message });
+    localStorage.removeItem('token');
+    changePage('/');
   }
 }

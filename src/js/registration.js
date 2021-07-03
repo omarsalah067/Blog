@@ -11,10 +11,12 @@ async function handleRegistrationSubmit(e) {
   const data = takeFormData(e);
   try {
     const answer = await axios.post(process.env.SERVER_ADDRESS + '/auth/register', data);
-    success({ text: answer.data.message });
-    changePage('./login.html');
+    if (answer.data) {
+      success({ text: answer.data.message });
+      changePage('./login.html');
+    }
   } catch (err) {
-    console.log(err);
+    console.log(err.message);
     err.request && error({ text: JSON.parse(err.request.response).message });
   }
 }

@@ -16,7 +16,7 @@ export const changePage = pathname => {
   try {
     window.history.pushState({}, pathname, window.location.origin + pathname);
     location.reload();
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err.message);
   }
 };

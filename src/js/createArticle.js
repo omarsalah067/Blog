@@ -23,11 +23,13 @@ async function handlePostSubmit(e) {
 
   try {
     axios.defaults.headers.common.Authorization = localStorage.getItem('token');
-    await axios.post(`${process.env.SERVER_ADDRESS}/api/articles`, formData);
-    success({ text: 'Success!' });
-    changePage('./index.html');
+    const done = await axios.post(`${process.env.SERVER_ADDRESS}/api/articles`, formData);
+    if (done) {
+      success({ text: 'Success!' });
+      changePage('/');
+    }
   } catch (err) {
-    console.log(err);
+    console.log(err.message);
     err.request && error({ text: JSON.parse(err.request.response).message });
   }
 }
