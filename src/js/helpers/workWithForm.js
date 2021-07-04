@@ -14,6 +14,8 @@ export const takeFormData = e => {
 
 export const changePage = pathname => {
   try {
+    console.log('window.history: ', window.history);
+    console.log('window.location: ', window.location);
     window.history.pushState({}, pathname, window.location.origin + pathname);
     location.reload();
   } catch (err) {

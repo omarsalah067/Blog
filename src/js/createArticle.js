@@ -2,8 +2,8 @@ import axios from 'axios';
 import FormData from 'form-data';
 import { success, error } from '@pnotify/core';
 import refs from './helpers/references';
+import { SERVER_ADDRESS } from './helpers/constants';
 import { changePage } from './helpers/workWithForm';
-require('dotenv').config();
 
 const start = refs.body.classList.contains('create-article-page');
 start && refs.postForm.addEventListener('submit', handlePostSubmit);
@@ -23,13 +23,13 @@ async function handlePostSubmit(e) {
 
   try {
     axios.defaults.headers.common.Authorization = localStorage.getItem('token');
-    const done = await axios.post(`${process.env.SERVER_ADDRESS}/api/articles`, formData);
+    const done = await axios.post(`${SERVER_ADDRESS}/api/articles`, formData);
     if (done) {
       success({ text: 'Success!' });
       changePage('/');
     }
   } catch (err) {
     console.log(err.message);
-    err.request && error({ text: JSON.parse(err.request.response).message });
+    err.request.response && error({ text: JSON.parse(err.request.response).message });
   }
 }
