@@ -10,8 +10,22 @@ start && getArticles();
 async function getArticles() {
   try {
     const answer = await axios.get(SERVER_ADDRESS + '/api/articles');
+
     if (answer) {
-      const markup = answer.data.docs.map(item => articleTemplate(item)).join('');
+      const markup = answer.data.docs
+        .map(item => {
+          const time = new Date(item.createdAt);
+          item.createdAt = time.toLocaleString('en-US', {
+            day: 'numeric',
+            year: 'numeric',
+            month: 'long',
+            hour: 'numeric',
+            minute: 'numeric',
+          });
+
+          return articleTemplate(item);
+        })
+        .join('');
       refs.articles.insertAdjacentHTML('afterbegin', markup);
     }
   } catch (err) {
