@@ -14,7 +14,7 @@ async function handleLoginSubmit(e) {
     if (answer.data) {
       localStorage.setItem('token', `Bearer ${answer.data.token}`);
       success({ text: 'Success!' });
-      changePage('/');
+      changePage('/CSPW210-frontend/');
     }
   } catch (err) {
     console.log(err.message);

@@ -15,7 +15,7 @@ async function handleLogout(e) {
       axios.defaults.headers.common.Authorization = null;
       localStorage.removeItem('token');
       success({ text: 'Success!' });
-      changePage('./index.html');
+      changePage('/CSPW210-frontend/');
     }
   } catch (err) {
     console.log(err.message);

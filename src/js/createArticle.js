@@ -26,7 +26,7 @@ async function handlePostSubmit(e) {
     const done = await axios.post(`${SERVER_ADDRESS}/api/articles`, formData);
     if (done) {
       success({ text: 'Success!' });
-      changePage('/');
+      changePage('/CSPW210-frontend/');
     }
   } catch (err) {
     console.log(err.message);
