@@ -13,7 +13,7 @@ async function handleRegistrationSubmit(e) {
     const answer = await axios.post(SERVER_ADDRESS + '/auth/register', data);
     if (answer.data) {
       success({ text: answer.data.message });
-      changePage('./login.html');
+      changePage('/CSPW210-frontend/');
     }
   } catch (err) {
     console.log(err.message);
