@@ -2,7 +2,7 @@
 
 .forms-form {
   font-family: $regular-font;
-  width: 300px;
+  width: 80%;
   margin: 100px auto;
   display: flex;
   flex-wrap: wrap;
@@ -31,6 +31,10 @@
   @extend .forms-input;
   min-height: 140px;
   padding: 10px 15px;
+}
+
+.forms-input__image {
+  padding-top: 8px;
 }
 
 @keyframes focus-change {

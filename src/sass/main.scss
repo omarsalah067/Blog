@@ -23,6 +23,42 @@ body {
   overflow: hidden;
 }
 
+.articles-container {
+  @extend .container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .articles {
-  padding-top: 60px;
+  padding-top: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.load-more {
+  width: 250px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .load-more {
+    width: 300px;
+  }
+
+  .articles-container {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .articles {
+    padding-top: 60px;
+  }
+
+  .articles-container {
+    width: 50%;
+  }
 }

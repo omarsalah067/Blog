@@ -1,9 +1,10 @@
 @import '../variables.scss';
 
 .article {
-  width: 600px;
   padding-bottom: 40px;
-  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .article-title {
@@ -14,20 +15,33 @@
 }
 
 .article-image {
-  border-radius: 10px;
   box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .article-text {
-  padding: 35px 0 25px;
+  word-wrap: break-word;
+  padding: 25px 0 15px;
   line-height: 1.5;
 }
 
-.article-author, .article-date {
+.article-author,
+.article-date {
   padding-bottom: 10px;
 }
 
 .article-span {
   font-family: $thin-font;
   color: $color-bright;
+}
+
+@media (min-width: 768px) {
+  .article {
+    align-items: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-text {
+    padding: 35px 0 25px;
+  }
 }

@@ -9,4 +9,5 @@ export default {
   login: document.querySelector(' .login-link'),
   registration: document.querySelector('.registration-link'),
   logoutEvent: document.querySelector('.logout'),
+  loadMore: document.querySelector('.load-more'),
 };

@@ -11,21 +11,20 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgb(95, 192, 160, 0.4);
-  padding: 0 16px;
 }
 
 .logo {
   font-family: $title-font;
-  font-size: 40px;
+  font-size: 30px;
   color: $color-main;
 }
 
 .menu {
-  width: 180px;
+  width: 140px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-family: $thin-font;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .menu li {
@@ -55,4 +54,26 @@
 .menu-link:focus {
   animation: underlines 0.6s alternate both;
   outline: none;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  .menu {
+    width: 160px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    width: 180px;
+    justify-content: space-around;
+  }
 }
