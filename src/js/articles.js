@@ -8,14 +8,10 @@ let pageCount;
 const start = refs.body.classList.contains('main-page');
 start && getArticles() && refs.loadMore.addEventListener('click', getMoreArticles);
 
-
 async function getArticles() {
   try {
     const answer = await axios.get(SERVER_ADDRESS + '/api/articles');
-
-    if (answer) {
-      insertMarkup(answer, 'afterbegin');
-    }
+    answer && insertMarkup(answer, 'afterbegin');
   } catch (err) {
     console.log(err.message);
     err.request.response && error({ text: JSON.parse(err.request.response).message });
@@ -29,10 +25,7 @@ async function getMoreArticles() {
         page: pageCount + 1,
       },
     });
-
-    if (answer) {
-      insertMarkup(answer, 'beforeend');
-    }
+    answer && insertMarkup(answer, 'beforeend');
   } catch (error) {
     console.log(err.message);
     err.request.response && error({ text: JSON.parse(err.request.response).message });
@@ -45,7 +38,11 @@ function insertMarkup(answer, insertPlace) {
     refs.loadMore.classList.add('hidden');
   }
 
-  const markup = answer.data.docs
+  const articles = answer.data.docs.sort(function (a, b) {
+    return new Date(b.createdAt) - new Date(a.createdAt);
+  });
+
+  const markup = articles
     .map(item => {
       const time = new Date(item.createdAt);
       item.createdAt = time.toLocaleString('en-US', {
@@ -59,5 +56,6 @@ function insertMarkup(answer, insertPlace) {
       return articleTemplate(item);
     })
     .join('');
+
   refs.articles.insertAdjacentHTML(insertPlace, markup);
 }

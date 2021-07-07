@@ -2,7 +2,6 @@ import refs from './helpers/references';
 
 try {
   const token = localStorage.getItem('token');
-  refs.loadMore && refs.loadMore.classList.remove('hidden');
 
   if (token) {
     refs.login && refs.login.classList.add('hidden');
